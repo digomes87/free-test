@@ -10,8 +10,10 @@ Icon
 # Thumbnails
 ._*
 
+*.venv
 
-Design-Patterns-In-Python
+.venvSoltos
+
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
