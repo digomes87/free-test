@@ -5,6 +5,7 @@ BaseException, entao todos esse casos estao abaixo dessa classe
 
 from typing import Callable, List
 
+
 class ExceptionDemo:
     """
     Class responsable for agreggation exmeplos of exceptions in python
@@ -15,26 +16,23 @@ class ExceptionDemo:
     def arithmetic_error():
         raise ArithmeticError("Erro aritmético genericos")
 
-
     @staticmethod
     def floating_point_error():
         raise FloatingPointError("Erro de ponto flutuante simulado")
 
-
     @staticmethod
     def overflow_error():
         import math
+
         return math.exp(1000)
 
-    
     @staticmethod
     def zero_division_error():
         return 1 / 0
 
-    
     @staticmethod
     def assertion_error():
-        assert False,  "Falha na asserção"
+        assert False, "Falha na asserção"
 
     @staticmethod
     def attribute_error():
@@ -45,14 +43,13 @@ class ExceptionDemo:
         import array
         import ctypes
 
-        a = array.array('d', [1.0, 2.0, 3.0])
+        a = array.array("d", [1.0, 2.0, 3.0])
         m = memoryview(a)
 
         try:
             a.append(4.0)
         finally:
             m.release()
-
 
     @staticmethod
     def eof_error():
@@ -91,6 +88,7 @@ class ExceptionDemo:
         def func():
             print(x)
             x = 5
+
         func()
 
 
@@ -120,7 +118,6 @@ def run_all():
         ExceptionDemo.name_error,
         ExceptionDemo.unbound_local_error,
     ]
-
 
     for method in demo_methods:
         run_safe(method)

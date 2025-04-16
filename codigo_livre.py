@@ -1,19 +1,18 @@
 class Phone:
-    name = 'Nokia1220'
+    name = "Nokia1220"
     typePhone = "Nokia"
-    color = 'Blue'
-    battery = 'Infinite'
+    color = "Blue"
+    battery = "Infinite"
     has_cam = False
 
-
     def do_call(self):
-        print('Calling .....')
+        print("Calling .....")
 
     def play_game(self):
-        print('Playing Snake game')
+        print("Playing Snake game")
 
     def music(self):
-        print('Playing music')
+        print("Playing music")
 
 
 class Car:
@@ -25,7 +24,6 @@ class Car:
         self.mileage = mileage
         self._fuel_level = 65.8
 
-
     @property
     def fuel_level(self):
         return self._fuel_level
@@ -34,18 +32,16 @@ class Car:
         if distance < 0:
             raise ValueError("Distancia não pode ser negativa")
 
-        fuel_need =  distance * 0.1
+        fuel_need = distance * 0.1
 
         if fuel_need > self._fuel_level:
             raise ValueError("Combustivel insuficiente para o trajeto")
 
-
         self.mileage += distance
         self._fuel_level -= fuel_need
 
-
     def refuel(self, amout):
-        if amout < 0 :
+        if amout < 0:
             raise ValueError("A quantidade nao pode ser negativa né, te liga !")
 
         new_fuel_level = self._fuel_level + amout

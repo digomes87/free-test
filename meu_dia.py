@@ -4,23 +4,30 @@ from typing import List, Callable
 def acordar():
     print("Acordei vamos começar o dia")
 
+
 def escovar_dentes():
     print("Esconvando os dentes")
+
 
 def tomar_cafe():
     print("Tomando cafe")
 
+
 def ir_pra_escola():
     print("Indo pra escola")
+
 
 def estudar():
     print("Estudando")
 
+
 def brincar():
     print("Brincando")
 
+
 def jantar():
     print("Brincando")
+
 
 def dormir():
     print("Dormindo")
@@ -33,6 +40,7 @@ def dia_de_uma_crianca(tarefas: List[Callable]):
 
     print("Fim do Dia")
 
+
 meu_dia = [
     acordar,
     escovar_dentes,
@@ -41,7 +49,7 @@ meu_dia = [
     estudar,
     brincar,
     jantar,
-    dormir
+    dormir,
 ]
 
 
