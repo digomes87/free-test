@@ -6,5 +6,3 @@ class PaymentMethod(ABC):
     @abstractmethod
     def process(self, amount: Decimal) -> Decimal:
         pass
-
-    

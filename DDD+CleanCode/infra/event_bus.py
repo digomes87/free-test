@@ -11,5 +11,5 @@ def subscribe(event_type: Type, handler: Callable):
 
 def publish(event):
     handlers = _event_handlers.get(type(event), [])
-    for handler in  handlers:
+    for handler in handlers:
         handler(event)

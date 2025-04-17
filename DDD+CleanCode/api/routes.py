@@ -8,8 +8,7 @@ from domain.events.payment_event import PaymentCompleted
 from infra.event_bus import publish
 
 
-
-router =  APIRouter()
+router = APIRouter()
 
 
 @router.post("/pagamentos", response_model=PaymentResponse)
@@ -22,16 +21,11 @@ def processar_pagamento(request: PaymentRequest):
     amount = Decimal(str(request.amount))
     result = processor.execute(amount)
 
-
-
     repo = InMemoryPaymentRepository()
     repo.save(request.method, amount, result)
 
-
-
     event = PaymentCompleted(amount=amount, final_amount=result, method=request.method)
     publish(event)
-
 
     return PaymentResponse(
         original_amount=amount,

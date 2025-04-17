@@ -6,7 +6,6 @@ class Container:
     def __init__(self):
         self._services = {}
 
-
     def register(self, key, builder):
         self._services[key] = builder
 
@@ -15,7 +14,6 @@ class Container:
         if builder is None:
             raise ValueError(f"Servico {key} não registrado")
         return builder()
-
 
 
 container = Container()

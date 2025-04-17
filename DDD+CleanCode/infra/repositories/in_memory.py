@@ -11,11 +11,9 @@ class PaymentRecord:
         self.final_amount = final_amount
 
 
-
 class InMemoryPaymentRepository:
     def __init__(self):
         self._store = []
-
 
     def save(self, method: str, amount: Decimal, final_amount: Decimal):
         record = PaymentRecord(str(uuid4()), method, amount, final_amount)
@@ -24,5 +22,3 @@ class InMemoryPaymentRepository:
 
     def list_all():
         return self._store
-
-        
