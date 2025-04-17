@@ -20,6 +20,6 @@ class Container:
 
 container = Container()
 
-container.register("Credit_card", lambda: PaymentProcessor(CreditCardPayment()))
+container.register("credit_card", lambda: PaymentProcessor(CreditCardPayment()))
 container.register("Boleto", lambda: PaymentProcessor(BoletoPayment()))
 container.register("Pix", lambda: PaymentProcessor(PixPayment()))
