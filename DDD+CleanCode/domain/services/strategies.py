@@ -15,3 +15,6 @@ class BoletoPayment(PaymentMethod):
 class PixPayment(PaymentMethod):
     def process(self, amount: Decimal) -> Decimal:
         return amount
+
+
+        

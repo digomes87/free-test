@@ -28,7 +28,7 @@ def processar_pagamento(request: PaymentRequest):
     publish(event)
 
     return PaymentResponse(
-        original_amount=amount,
-        final_amount=result,
-        method=request.method,
+        original_amount=float(amount),
+        final_amount=float(result),
+        method=request.method
     )

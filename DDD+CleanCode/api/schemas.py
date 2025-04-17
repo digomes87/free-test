@@ -9,4 +9,4 @@ class PaymentRequest(BaseModel):
 class PaymentResponse(BaseModel):
     original_amount: float
     final_amount: float
-    mehtod: str
+    method: str
