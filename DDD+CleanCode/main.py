@@ -38,3 +38,11 @@ repository.save("credit_card", amount, final_amount)
 event = PaymentCompleted(amount=amount, final_amount=final_amount, method="credit_card")
 publish(event)
 
+
+from fastapi import FastAPI
+from api.routes import router
+
+
+app = FastAPI(Title="Payment Service")
+
+app.include_router(router)
