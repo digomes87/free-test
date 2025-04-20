@@ -1,3 +1,4 @@
+from matplot.quantum_experiment_graphic import QuantumPlotter
 from qiskit import QuantumCircuit
 from qiskit_aer import Aer
 from qiskit.result import Result
@@ -35,7 +36,8 @@ def main() -> None:
     experiment =  QuantumExperiment(num_qubits= 1)
     result = experiment.run(shots=100)
     experiment.show_counts(result)
-
+    
+    QuantumPlotter(result).plot_counts()
 
 
 if __name__ == "__main__":
