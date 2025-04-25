@@ -1,5 +1,5 @@
-from visualizer import QuantumStateVisualizer
-from refac_visualizer import QuantumSuperpositionVisualizer
+from visual.classic_visualizer import QuantumStateVisualizer
+from visual.refac_visualizer import QuantumSuperpositionVisualizer
 
 
 if __name__== "__main__":
